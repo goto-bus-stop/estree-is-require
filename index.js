@@ -16,12 +16,17 @@ module.exports = function isRequire (node, source) {
   if (!arg) {
     return false
   }
-  if (arg.type !== 'Literal' && arg.type !== 'StringLiteral' && arg.type !== 'NumericLiteral') {
+
+  if (arg.type !== 'Literal' && arg.type !== 'StringLiteral' && arg.type !== 'NumericLiteral' && arg.type !== 'TemplateLiteral') {
     return false
   }
 
   if (!source) {
     return true
+  }
+
+  if (arg.type === 'TemplateLiteral' && arg.quasis.length === 1 && arg.quasis[0].type === 'TemplateElement') {
+    return arg.quasis[0].value.cooked === source
   }
 
   return arg.value === source
