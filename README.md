@@ -41,7 +41,7 @@ Also see the [tests](./test.js) for more examples.
 ### `isRequire(node, source)`
 
 Check if `node` is a call to `require`.
-If `source` is given, the first argument to `require` matches it.
+If `source` is given, also check if the first argument to `require` matches it.
 
 ## License
 
