@@ -10,9 +10,9 @@
     "estree-is-identifier": "^1.0.0"
   },
   "devDependencies": {
-    "acorn": "^5.3.0",
-    "standard": "^10.0.3",
-    "tape": "^4.8.0"
+    "acorn": "^6.2.0",
+    "standard": "^13.0.0",
+    "tape": "^4.11.0"
   },
   "homepage": "https://github.com/goto-bus-stop/estree-is-require",
   "keywords": [
